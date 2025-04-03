@@ -1,0 +1,66 @@
+// SCSS Variables (mostly for build-time constructs like breakpoints)
+$bp-medium: 768px;
+$bp-large: 1024px;
+$transition-base: all 0.3s ease-in-out; // SCSS variable for consistent transition definition
+
+// CSS Custom Properties (defined in :root for global scope)
+:root {
+  // Colors
+  --color-primary: #007AFF;         // Example Apple blue
+  --color-primary-darker: #005ecb;    // Slightly darker for hover/active
+  --color-secondary: #5856D6;        // Example Apple purple
+  --color-secondary-darker: #413fc3; // Slightly darker for hover/active
+  --color-accent: #FF9500;          // Example Apple orange
+  --color-text-primary: #1d1d1f;      // Near black
+  --color-text-secondary: #6e6e73;    // Medium gray
+  --color-text-on-primary: #ffffff;   // Text on primary background
+  --color-text-on-secondary: #ffffff; // Text on secondary background
+  --color-background-light: #ffffff;
+  --color-background-medium: #f5f5f7; // Light gray
+  --color-background-dark: #1d1d1f;   // Near black
+  --color-border: #d2d2d7;
+  --color-success: #34C759;        // Example Green
+  --color-error: #FF3B30;          // Example Red
+
+  // Typography
+  --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-size-base: 1rem; // Base font size (usually 16px)
+  --line-height-base: 1.6;
+
+  // Font Weights (Optional but good practice)
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Heading Sizes (Example - adjust as needed)
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+
+  // Spacing Unit (Base for margins, paddings)
+  --spacing-unit: 8px;
+
+  // Derived Spacing
+  --spacing-xs: calc(var(--spacing-unit) * 0.5);  // 4px
+  --spacing-sm: var(--spacing-unit);             // 8px
+  --spacing-md: calc(var(--spacing-unit) * 2);   // 16px
+  --spacing-lg: calc(var(--spacing-unit) * 3);   // 24px
+  --spacing-xl: calc(var(--spacing-unit) * 5);   // 40px
+  --spacing-xxl: calc(var(--spacing-unit) * 8);  // 64px
+
+  // Section Padding
+  --section-padding-y: calc(var(--spacing-unit) * 10); // 80px
+
+  // Border Radius
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+
+  // Box Shadows (Example)
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+} // End :root

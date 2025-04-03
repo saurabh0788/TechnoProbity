@@ -1,0 +1,190 @@
+// --- Header Styles ---
+.header {
+    background-color: var(--color-background-light);
+    padding: var(--spacing-sm) 0; // Smaller padding for header
+    position: sticky; // Makes header sticky
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; // Ensure it's above other content
+    box-shadow: var(--box-shadow-sm); // Subtle shadow when sticky
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 60px; // Ensure consistent height
+    }
+
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; // Or flex if needed for alignment
+        &:hover {
+            opacity: 0.8; // Simple hover effect for logo
+        }
+    }
+
+    &__logo-img {
+        max-height: 40px; // Adjust logo size as needed
+        width: auto;
+    }
+
+    &__logo-text { // If using text logo
+        font-size: 1.5rem;
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text-primary);
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-lg);
+
+        @media (max-width: $bp-large - 1) { // Hide on medium/small screens
+            display: none; // Hide by default on mobile
+            // Mobile styles when menu is open (applied via JS toggle class)
+            position: absolute;
+            top: 100%; // Position below header
+            left: 0;
+            width: 100%;
+            background-color: var(--color-background-light);
+            flex-direction: column;
+            align-items: stretch; // Stretch items full width
+            padding: var(--spacing-md) 0;
+            box-shadow: var(--box-shadow-md);
+            gap: 0; // Reset gap for vertical layout
+        }
+    }
+
+    &__menu-item {
+        @media (max-width: $bp-large - 1) {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__menu-link {
+        font-size: 0.95rem;
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-secondary);
+        padding: var(--spacing-sm) var(--spacing-xs); // Add some padding for hit area
+        position: relative;
+        transition: color 0.2s ease-in-out;
+
+        &::after { // Subtle underline effect on hover/active
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%; // Start from center
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease-out;
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--color-text-primary);
+            &::after {
+                width: 80%; // Grow underline on hover
+            }
+        }
+
+        &--active {
+            color: var(--color-text-primary);
+             &::after {
+                width: 80%; // Show underline for active link
+            }
+        }
+
+        @media (max-width: $bp-large - 1) {
+            display: block; // Make link take full width of list item
+            padding: var(--spacing-md); // Larger padding for mobile touch targets
+            &::after { display: none; } // Disable underline effect on mobile nav items
+             &--active {
+                background-color: var(--color-background-medium); // Highlight active item bg
+             }
+             &:hover,
+             &:focus {
+                 background-color: var(--color-background-medium);
+                 color: var(--color-primary); // Highlight text on hover
+             }
+        }
+    }
+
+    &__cta { // Header specific CTA button adjustments if needed
+       font-size: 0.9rem;
+       padding: var(--spacing-sm) var(--spacing-md); // Slightly smaller button padding
+
+       @media (max-width: $bp-large - 1) {
+           display: none; // Hide header CTA on small screens (can be moved into mobile menu if desired)
+       }
+    }
+
+    // --- Mobile Menu Toggle ---
+    &__mobile-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--spacing-sm);
+        display: none; // Hidden by default, shown on smaller screens
+        z-index: 1001; // Ensure toggle is above mobile menu
+
+        @media (max-width: $bp-large - 1) {
+            display: block;
+        }
+    }
+
+    &__toggle-icon { // Basic hamburger icon lines
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-text-primary);
+        transition: transform 0.3s ease-out, background-color 0s 0.3s linear; // Delay background disappearing
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            transition: top 0.3s 0.3s ease-out, transform 0.3s ease-out; // Delay top/bottom movement
+        }
+
+        &::before { top: -8px; }
+        &::after { top: 8px; }
+    }
+
+    // --- Styles when Mobile Menu is Open ---
+    &__nav.is-mobile-menu-open {
+        .header__menu {
+            display: flex; // Show the menu
+        }
+
+        .header__mobile-toggle .header__toggle-icon {
+            background-color: transparent; // Middle line disappears
+            transition-delay: 0s; // Remove delay for background
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top 0.3s ease-out, transform 0.3s 0.3s ease-out; // Delay rotation
+            }
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+                 transition: top 0.3s ease-out, transform 0.3s 0.3s ease-out; // Delay rotation
+            }
+        }
+    }
+} // End .header

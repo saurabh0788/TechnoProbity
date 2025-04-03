@@ -1,0 +1,29 @@
+// 1. Variables (Defines CSS custom properties in :root)
+@import './variables';
+
+// 2. Base & Typography (Uses variables defined above)
+@import './base';
+@import './typography';
+
+// 3. Layout Components (Header, Footer, Nav)
+@import './header'; // Styles for .header etc. - Apply var() inside this file
+@import 'footer'; // Styles for .footer etc. - Apply var() inside this file
+// @import 'navigation'; // If navigation gets complex
+
+// 4. UI Components (Buttons, Forms, Cards etc.)
+@import './buttons'; // Styles for .button etc. - Apply var() inside this file
+// @import 'forms'; // Will add later
+// @import 'cards'; // If needed for other components
+
+// 5. Page Sections / Blocks (Specific page structure styles)
+@import './hero'; // Styles for .hero etc. - Apply var() inside this file
+@import './sections'; // Styles for .value-prop, .differentiators etc. Apply var() inside this file
+                   // Or break into:
+                   // @import 'value-prop';
+                   // @import 'differentiators';
+                   // @import 'client-focus';
+                   // @import 'candidate-focus';
+
+// 6. Animations & Utilities
+@import './animations'; // Styles for animation classes - May use variables
+// @import 'utilities'; // Utility classes like .text-center etc.

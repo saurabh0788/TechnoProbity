@@ -1,0 +1,249 @@
+// --- General Section Header ---
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl); // Generous space after header
+    max-width: 750px; // Limit width of header text
+    margin-left: auto;
+    margin-right: auto;
+
+     // Reduce margin on smaller screens if needed
+     @media (max-width: $bp-medium - 1) {
+         margin-bottom: var(--spacing-xl);
+     }
+}
+
+// --- Value Proposition Section (Cards) ---
+.value-prop {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: var(--spacing-lg);
+
+        @media (min-width: $bp-medium) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl); // Increase gap on larger screens
+        }
+    }
+
+    &__card {
+        background-color: var(--color-background-light);
+        border-radius: var(--border-radius-large); // More rounded corners
+        padding: var(--spacing-xl);
+        text-align: center;
+        border: 1px solid var(--color-border); // Subtle border
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        display: flex; // Use flex for vertical alignment if needed
+        flex-direction: column;
+        align-items: center; // Center content horizontally
+
+        &:hover {
+            transform: translateY(-8px); // Lift effect
+            box-shadow: var(--box-shadow-lg); // More pronounced shadow on hover
+            border-color: transparent; // Hide border on hover maybe?
+        }
+    }
+
+    &__icon-wrapper {
+        background-color: rgba(var(--color-primary-rgb, 0, 122, 255), 0.1); // Use primary color with low alpha
+        border-radius: 50%; // Circular background for icon
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        display: inline-flex; // To size wrapper to content
+    }
+
+    // Helper variable for primary color RGB values (needed for rgba)
+    :root { --color-primary-rgb: 0, 122, 255; } // Set this based on your --color-primary hex
+
+    &__icon {
+        max-width: 3rem;
+        height: 3rem;
+    }
+
+    &__card-content {
+        // Container for text if needed for structure
+    }
+
+    &__card-title {
+        font-size: var(--font-size-h4);
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-text-primary);
+    }
+
+    &__card-text {
+        font-size: 0.95rem;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+    }
+} // End .value-prop
+
+// --- Differentiators Section (Icon Feature List) ---
+.differentiators {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); // Mobile: 1 column
+        gap: var(--spacing-lg) var(--spacing-xl); // Row gap, Column gap
+
+         @media (min-width: $bp-medium) {
+             grid-template-columns: repeat(2, 1fr); // Tablet: 2 columns
+             gap: var(--spacing-xl) var(--spacing-xxl);
+         }
+         @media (min-width: $bp-large) {
+             grid-template-columns: repeat(4, 1fr); // Desktop: 4 columns
+             gap: var(--spacing-xl) var(--spacing-lg); // Adjust gap if 4 wide
+         }
+    }
+
+    &__item {
+        text-align: center;
+        padding: var(--spacing-md); // Less padding than cards
+    }
+
+    &__icon {
+        max-width: 55px;
+        height: auto;
+        margin: 0 auto var(--spacing-md);
+        color: var(--color-secondary); // Use secondary color
+        transition: transform 0.3s ease-out;
+    }
+
+     &__item:hover &__icon {
+         transform: scale(1.1); // Slight zoom on icon hover
+     }
+
+    &__item-title {
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: var(--spacing-xs);
+        color: var(--color-text-primary);
+    }
+
+    &__item-text {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+    }
+} // End .differentiators
+
+// --- Client Focus & Candidate Focus Sections (Two-Column Image/Text) ---
+.client-focus,
+.candidate-focus {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr; // Mobile: single column
+        gap: var(--spacing-xl);
+        align-items: center;
+
+        @media (min-width: $bp-medium) {
+            grid-template-columns: repeat(2, 1fr); // Desktop: two equal columns
+            gap: var(--spacing-xxl); // Generous gap
+        }
+    }
+
+    // Specific order for Client Focus (Text Left, Image Right on Desktop)
+    .client-focus &__content {
+         @media (min-width: $bp-medium) { order: 1; }
+    }
+    .client-focus &__image-wrapper {
+         @media (min-width: $bp-medium) { order: 2; }
+    }
+
+    // Specific order for Candidate Focus (Image Left, Text Right on Desktop)
+    .candidate-focus &__image-wrapper {
+         @media (min-width: $bp-medium) { order: 1; }
+    }
+    .candidate-focus &__content {
+         @media (min-width: $bp-medium) { order: 2; }
+    }
+
+
+    &__image-wrapper {
+        border-radius: var(--border-radius-large);
+        overflow: hidden; // Crucial for image zoom effect
+        box-shadow: var(--box-shadow-md);
+        position: relative; // For potential overlays or effects
+        transition: box-shadow 0.3s ease-out;
+
+         &:hover {
+             box-shadow: var(--box-shadow-lg);
+         }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.4s ease-out; // Image transition
+    }
+
+    // Zoom image slightly on image wrapper hover
+    &__image-wrapper:hover &__image {
+        transform: scale(1.03); // Subtle zoom
+    }
+
+    &__content {
+        text-align: center; // Center text on mobile
+
+         @media (min-width: $bp-medium) {
+            text-align: left; // Align left on larger screens
+        }
+    }
+
+    &__title {
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-semibold);
+        line-height: 1.25;
+        margin-bottom: var(--spacing-lg);
+        color: var(--color-text-primary);
+        text-align: inherit; // Inherit from __content
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+        margin-bottom: var(--spacing-xl);
+        max-width: 550px; // Limit text width slightly
+
+        // Center text block on mobile, allow left align on desktop
+        @media (max-width: $bp-medium - 1) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+         @media (min-width: $bp-medium) {
+             margin-left: 0; // Reset margin for left align
+         }
+    }
+
+    &__cta {
+        // Inherits base .button styles
+    }
+} // End .client-focus & .candidate-focus
+
+// --- Minimal CTA Section ---
+.cta-minimal {
+    background-color: var(--color-background-medium); // Or primary color for emphasis
+
+    &__container {
+        text-align: center;
+        padding: var(--spacing-xl) 0; // Adjust padding as needed
+    }
+
+    &__title {
+         font-size: var(--font-size-h2);
+         font-weight: var(--font-weight-semibold);
+         margin-bottom: var(--spacing-sm);
+         color: var(--color-text-primary); // Adjust if background is colored
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+        color: var(--color-text-secondary); // Adjust if background is colored
+        margin-bottom: var(--spacing-lg);
+    }
+
+    &__button {
+         // Inherits button styles
+    }
+}

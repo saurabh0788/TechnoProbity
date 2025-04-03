@@ -1,0 +1,31 @@
+// --- Animation States & Utilities ---
+
+// Initial states for elements to be animated using data-scroll attribute
+[data-scroll] {
+    opacity: 0;
+    transform: translateY(var(--spacing-lg)); // Start slightly down
+    transition-property: opacity, transform;
+    transition-duration: 0.7s; // Slightly longer duration
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); // Smooth easing
+    // transition-delay is handled by JS based on data-delay attribute
+  }
+  
+  // --- Class added by JavaScript when element becomes visible ---
+  .is-visible {
+      opacity: 1;
+      transform: translateY(0); // Return to original position
+  }
+  
+  // --- CSS View Transitions (Basic Placeholder - No Change Needed Yet) ---
+  // (Keep the previous View Transition placeholders or remove if not implementing yet)
+  
+  // Example simple fade animations (if needed elsewhere)
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }

@@ -1,0 +1,121 @@
+// --- Hero Section Styles ---
+.hero {
+   min-height: 80vh; // Increased height
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: calc(var(--section-padding-y) * 1.5) 0 var(--section-padding-y); // More top padding
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+
+   background-color: hsl(222, 6%, 90%);
+   background-image: linear-gradient(
+         30deg,
+         #f4f4f6 12%,
+         transparent 12.5%,
+         transparent 87%,
+         #f4f4f6 87.5%,
+         #f4f4f6
+      ),
+      linear-gradient(
+         150deg,
+         #f4f4f6 12%,
+         transparent 12.5%,
+         transparent 87%,
+         #f4f4f6 87.5%,
+         #f4f4f6
+      ),
+      linear-gradient(
+         30deg,
+         #f4f4f6 12%,
+         transparent 12.5%,
+         transparent 87%,
+         #f4f4f6 87.5%,
+         #f4f4f6
+      ),
+      linear-gradient(
+         150deg,
+         #f4f4f6 12%,
+         transparent 12.5%,
+         transparent 87%,
+         #f4f4f6 87.5%,
+         #f4f4f6
+      ),
+      linear-gradient(
+         60deg,
+         #d1d4db 25%,
+         transparent 25.5%,
+         transparent 75%,
+         #d1d4db 75%,
+         #d1d4db
+      ),
+      linear-gradient(
+         60deg,
+         #d1d4db 25%,
+         transparent 25.5%,
+         transparent 75%,
+         #d1d4db 75%,
+         #d1d4db
+      );
+   background-size: 80px 140px;
+   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+   &__content {
+      max-width: 850px; // Slightly wider content
+      position: relative;
+      z-index: 2;
+   }
+
+   &__title {
+      font-size: calc(var(--font-size-h1) * 1.2); // Larger Hero Title
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      line-height: 1.15;
+      margin-bottom: var(--spacing-md);
+      letter-spacing: -0.02em; // Subtle tighter spacing like Apple's style
+   }
+
+   &__subtitle {
+      font-size: 1.35rem;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-xl);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+   }
+
+   &__cta-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+   }
+
+   &__cta-button {
+      min-width: 160px;
+      padding: var(--spacing-md) var(--spacing-xl); // Larger CTA buttons
+      font-size: 1.05rem;
+   }
+
+   // Optional: Add pseudo-elements for background shapes/patterns if desired
+   // &__background::before { content:''; ... }
+
+   @media (max-width: $bp-medium - 1) {
+      min-height: 65vh;
+
+      &__title {
+         font-size: calc(var(--font-size-h1) * 0.9); // Scale down title size
+      }
+      &__subtitle {
+         font-size: 1.15rem; // Scale down subtitle size
+      }
+      &__cta-button {
+         min-width: 140px;
+         padding: var(--spacing-sm) var(--spacing-lg);
+         font-size: 1rem;
+      }
+   }
+}

@@ -1,0 +1,39 @@
+.button {
+    display: inline-block;
+    // Use calc() with CSS variables for padding
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+    font-size: var(--font-size-base);     
+    font-weight: var(--font-weight-medium); 
+    text-align: center;
+    border: 1px solid transparent; // Start with transparent border for consistent sizing
+    border-radius: var(--border-radius-medium); 
+    cursor: pointer;
+    transition: $transition-base; // Use SCSS var
+    text-decoration: none;
+
+    &--primary {
+        background-color: var(--color-primary); 
+        color: var(--color-text-on-primary);    
+        border-color: var(--color-primary);     // Match border
+
+        &:hover, &:focus {
+            background-color: var(--color-primary-darker); 
+            border-color: var(--color-primary-darker);     // Match border
+            color: var(--color-text-on-primary);           // Keep color consistent
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: var(--color-primary);        
+        border-color: var(--color-primary); 
+
+         &:hover, &:focus {
+            background-color: var(--color-primary);        
+            color: var(--color-text-on-primary);           
+            border-color: var(--color-primary);            // Match background
+        }
+    }
+
+     // Add other button styles if needed
+}
