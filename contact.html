@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Techno Probity - Connecting top IT talent with innovative companies. Specialized staffing and recruitment solutions.">
+    <title>Techno Probity - Elite IT Staffing & Recruitment</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Add Favicon links here -->
+    <!-- <link rel="icon" href="/favicon.ico" sizes="any"> -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav container">
+            <a href="index.html" class="header__logo-link" aria-label="Techno Probity Homepage">
+                <img src="./assets/brand/logo.svg" alt="Techno Probity Logo" class="header__logo-img">
+                <span class="header__logo-text">Techno Probity</span>
+            </a>
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="index.html" class="header__menu-link">Home</a></li>
+                <li class="header__menu-item"><a href="services.html" class="header__menu-link">Services</a></li>
+                <!-- <li class="header__menu-item"><a href="candidates.html" class="header__menu-link">For Candidates</a></li> -->
+                <li class="header__menu-item"><a href="about.html" class="header__menu-link">About Us</a></li>
+                <li class="header__menu-item"><a href="contact.html"
+                        class="header__menu-link header__menu-link--active">Contact Us</a></li>
+            </ul>
+            <!-- <a href="contact.html" class="button button--primary header__cta">Get Started</a> -->
+            <button class="header__mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="header__toggle-icon"></span> <!-- Icon for hamburger -->
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Hero Section -->
+        <section class="contact-hero section-padding--small section-padding--colored">
+            <div class="container contact-hero__container" data-scroll>
+                <h1 class="contact-hero__title">Let's Connect</h1>
+                <p class="contact-hero__subtitle">We're here to answer your questions about staffing needs or career
+                    opportunities. Reach out today.</p>
+            </div>
+        </section>
+
+        <!-- Contact Details Section -->
+        <section class="contact-details section-padding">
+            <div class="container">
+                <div class="contact-details__grid">
+                    <!-- Email Card -->
+                    <div class="contact-card" data-scroll data-delay="100">
+                        <div class="contact-card__icon-wrapper">
+                            <img src="./assets/icons/mail-fill.svg" alt="Email Icon" class="contact-card__icon">
+                        </div>
+                        <div class="contact-card__content">
+                            <h3 class="contact-card__title">Email Us</h3>
+                            <a href="mailto:info@technoprobity.com" class="contact-card__link">info@technoprobity.com</a>
+                            <p class="contact-card__description">Best for detailed inquiries and non-urgent requests.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Phone Card -->
+                    <div class="contact-card" data-scroll data-delay="200">
+                        <div class="contact-card__icon-wrapper">
+                            <img src="./assets/icons/phone-fill.svg" alt="Phone Icon" class="contact-card__icon">
+                        </div>
+                        <div class="contact-card__content">
+                            <h3 class="contact-card__title">Call Us</h3>
+                            <a href="tel:+1234567890" class="contact-card__link">+91 965 071 7457</a>
+                            <p class="contact-card__description">Mon-Fri, 9am-5pm (IST)</p>
+                        </div>
+                    </div>
+                    <!-- Address Block (Optional) -->
+                    <div class="contact-card" data-scroll data-delay="300">
+                        <div class="contact-card__icon-wrapper">
+                            <img src="./assets/icons/building-fill.svg" alt="Address Icon" class="contact-address__icon">
+                        </div>
+                        <div class="contact-card__content">
+                            <h3 class="contact-address__title">Our Office</h3>
+                            <address class="contact-address__details">
+                                [Street Address]<br>
+                                Noida, Uttar Pradesh<br>
+                                India
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section section-padding section-padding--colored">
+            <div class="container contact-form-section__container">
+                <div class="section-header" data-scroll>
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <p class="section-subtitle">Fill out the form below, and we'll get back to you shortly.</p>
+                </div>
+
+                <!--
+                    FORM SUBMISSION SETUP:
+                    - Method 1: Google Apps Script
+                      -> Set action="YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"
+                      -> Add name attributes to all inputs/select/textarea matching your Sheet columns.
+                      -> Requires JS to handle submission feedback (e.g., thank you message).
+                    - Method 2: Netlify Forms
+                      -> Add data-netlify="true" attribute to the <form> tag.
+                      -> Add name attributes to all inputs/select/textarea.
+                    - Method 3: Formspree
+                      -> Set action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID"
+                      -> Set method="POST"
+                      -> Add name attributes to all inputs/select/textarea.
+                -->
+                <form id="contact-form" class="contact-form" data-scroll data-delay="100">
+                    <!-- Add action/method/data-netlify attributes here based on your chosen method -->
+
+                    <div class="contact-form__grid">
+                        <div class="form-group">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" id="first-name" name="firstName" class="form-input"
+                                placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" class="form-input"
+                                placeholder="Enter your last name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone <span
+                                    class="form-label--optional">(Optional)</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group form-group--full">
+                            <label for="user-type" class="form-label">I am a...</label>
+                            <select id="user-type" name="userType" class="form-select" required>
+                                <option value="" disabled selected>Please select...</option>
+                                <option value="Potential Client">Potential Client</option>
+                                <option value="Candidate">Candidate</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group--full">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5"
+                                placeholder="How can we help you?" required></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-form__submit-container">
+                        <!-- Add hidden inputs for timestamp, status if using Google Apps Script -->
+                        <!-- <input type="hidden" name="timestamp" value=""> -->
+                        <!-- <input type="hidden" name="status" value="New"> -->
+                        <button type="submit" class="button button--primary contact-form__submit">Send Message</button>
+                    </div>
+                    <div id="form-status" class="form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content remains the same as previous version -->
+        <div class="container footer__container">
+            <div class="footer__main">
+                <div class="footer__about">
+                    <a href="index.html" class="footer__logo-link" aria-label="Techno Probity Homepage">
+                        <img src="./assets/brand/logo.svg" alt="Techno Probity Logo" class="footer__logo-img">
+                    </a>
+                    <p class="footer__tagline">Connecting Innovation with Expertise.</p>
+                    <div class="footer__socials">
+                        <!-- Add SVG Icons directly or use <img> -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                            class="footer__social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.761 24 24 21.761 24 19V5C24 2.239 21.761 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.467 6.732 6.5 6.732ZM20 19H17V13.396C17 10.029 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.129V19Z"
+                                    fill="currentColor" />
+                            </svg></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                            class="footer__social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.34 9.34 0 0 1-2.958 1.134 4.664 4.664 0 0 0-7.938 4.251 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.658 4.658 0 0 0 1.96 9.79a4.648 4.648 0 0 1-2.11-.583v.06A4.657 4.657 0 0 0 3.65 13.863a4.65 4.65 0 0 1-2.1.08 4.656 4.656 0 0 0 4.35 3.234 9.346 9.346 0 0 1-5.78 2.001 9.47 9.47 0 0 1-1.112-.065 13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254 0-.202-.005-.403-.014-.602a9.49 9.49 0 0 0 2.323-2.41z"
+                                    fill="currentColor" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Company</h4>
+                    <ul class="footer__list">
+                        <li><a href="#services-overview" class="footer__link">Services</a></li>
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Engage</h4>
+                    <ul class="footer__list">
+                        <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        <!-- <li><a href="candidates.html" class="footer__link">For Candidates</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__links-title">Contact</h4>
+                    <ul class="footer__list footer__list--contact">
+                        <li><a href="mailto:info@technoprobity.com" class="footer__link">info@technoprobity.com</a></li>
+                        <li><a href="tel:+919650717457" class="footer__link">+91 965 071 7457</a></li>
+                        <li>
+                            <p class="footer__address">Noida, Uttar Pradesh, India</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© <span id="current-year"></span> Techno Probity. All rights reserved.</p>
+                <!-- <ul class="footer__legal-links">
+                    <li><a href="privacy.html" class="footer__link footer__link--legal">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer__link footer__link--legal">Terms of Service</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: Add JS for form submission handling (e.g., AJAX for Google Script) -->
+    <!-- <script src="js/form-handler.js" defer></script> -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
