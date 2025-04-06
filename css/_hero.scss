@@ -103,7 +103,7 @@
    // Optional: Add pseudo-elements for background shapes/patterns if desired
    // &__background::before { content:''; ... }
 
-   @media (max-width: $bp-medium - 1) {
+   @media (max-width: #{$bp-medium - 1}) {
       min-height: 65vh;
 
       &__title {

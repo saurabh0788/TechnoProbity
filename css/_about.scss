@@ -1,0 +1,270 @@
+.section-padding--small {
+   padding-top: calc(var(--section-padding-y) * 0.6);
+   padding-bottom: calc(var(--section-padding-y) * 0.6);
+}
+
+.about-hero {
+   text-align: center;
+   min-height: 80vh;
+   display: grid;
+   align-items: center;
+   background-color: #e6e6e6;
+   background-image: radial-gradient(
+         circle at 100% 150%,
+         #e6e6e6 24%,
+         white 24%,
+         white 28%,
+         #e6e6e6 28%,
+         #e6e6e6 36%,
+         white 36%,
+         white 40%,
+         transparent 40%,
+         transparent
+      ),
+      radial-gradient(
+         circle at 0 150%,
+         #e6e6e6 24%,
+         white 24%,
+         white 28%,
+         #e6e6e6 28%,
+         #e6e6e6 36%,
+         white 36%,
+         white 40%,
+         transparent 40%,
+         transparent
+      ),
+      radial-gradient(
+         circle at 50% 100%,
+         white 10%,
+         #e6e6e6 10%,
+         #e6e6e6 23%,
+         white 23%,
+         white 30%,
+         #e6e6e6 30%,
+         #e6e6e6 43%,
+         white 43%,
+         white 50%,
+         #e6e6e6 50%,
+         #e6e6e6 63%,
+         white 63%,
+         white 71%,
+         transparent 71%,
+         transparent
+      ),
+      radial-gradient(
+         circle at 100% 50%,
+         white 5%,
+         #e6e6e6 5%,
+         #e6e6e6 15%,
+         white 15%,
+         white 20%,
+         #e6e6e6 20%,
+         #e6e6e6 29%,
+         white 29%,
+         white 34%,
+         #e6e6e6 34%,
+         #e6e6e6 44%,
+         white 44%,
+         white 49%,
+         transparent 49%,
+         transparent
+      ),
+      radial-gradient(
+         circle at 0 50%,
+         white 5%,
+         #e6e6e6 5%,
+         #e6e6e6 15%,
+         white 15%,
+         white 20%,
+         #e6e6e6 20%,
+         #e6e6e6 29%,
+         white 29%,
+         white 34%,
+         #e6e6e6 34%,
+         #e6e6e6 44%,
+         white 44%,
+         white 49%,
+         transparent 49%,
+         transparent
+      );
+   background-size: 100px 50px;
+}
+
+.about-hero__container {
+   max-width: 800px;
+}
+
+.about-hero__title {
+   font-size: var(--font-size-h1);
+   font-size: calc(var(--font-size-h1)* 1.2);
+   font-weight: var(--font-weight-bold);
+   line-height: 1.2;
+   margin-bottom: var(--spacing-md);
+   color: var(--color-text-primary);
+}
+
+.about-hero__subtitle {
+   font-size: 1.3rem;
+   color: var(--color-text-secondary);
+   line-height: 1.6;
+}
+
+.mission-vision__container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: var(--spacing-xl);
+
+   @media (min-width: $bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-xxl);
+   }
+}
+
+.mission-vision__item {
+   display: flex;
+   align-items: flex-start;
+   gap: var(--spacing-lg);
+}
+
+.mission-vision__icon-wrapper {
+   flex-shrink: 0;
+   color: var(--color-primary);
+   margin-top: var(--spacing-xs);
+}
+
+.mission-vision__icon {
+   width: 40px;
+   height: 40px;
+}
+
+.mission-vision__title {
+   font-size: var(--font-size-h3);
+   font-weight: var(--font-weight-semibold);
+   margin-bottom: var(--spacing-sm);
+   color: var(--color-text-primary);
+}
+
+.mission-vision__text {
+   font-size: 1.05rem;
+   color: var(--color-text-secondary);
+   line-height: 1.7;
+}
+
+.our-approach__visual {
+   margin-bottom: var(--spacing-xl);
+   border-radius: var(--border-radius-medium);
+   overflow: hidden;
+   box-shadow: var(--box-shadow-md);
+   max-width: 900px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.our-approach__image {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+.our-approach__description {
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   font-size: 1.1rem;
+   line-height: 1.7;
+   color: var(--color-text-secondary);
+
+   p {
+      margin-bottom: 0;
+   }
+}
+
+.our-values__grid {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   gap: var(--spacing-lg);
+
+   @media (min-width: $bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-xl);
+   }
+   @media (min-width: $bp-large) {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+
+.our-values__card {
+   background-color: var(--color-background-light);
+   border: 1px solid var(--color-border);
+   border-radius: var(--border-radius-medium);
+   padding: var(--spacing-xl);
+   text-align: center;
+   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
+   &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--box-shadow-md);
+   }
+}
+
+.our-values__icon-wrapper {
+   margin-bottom: var(--spacing-lg);
+   color: var(--color-secondary);
+   display: inline-block;
+}
+
+.our-values__icon {
+   width: 48px;
+   height: 48px;
+}
+
+.our-values__title {
+   font-size: var(--font-size-h4);
+   font-weight: var(--font-weight-semibold);
+   color: var(--color-text-primary);
+   margin-bottom: var(--spacing-xs);
+}
+
+.our-values__text {
+   font-size: 0.95rem;
+   color: var(--color-text-secondary);
+   line-height: 1.6;
+}
+
+.team-overview__container {
+   max-width: 800px;
+   text-align: center;
+}
+
+.team-overview__title {
+   font-size: var(--font-size-h3);
+   font-weight: var(--font-weight-semibold);
+   margin-bottom: var(--spacing-md);
+   color: var(--color-text-primary);
+}
+
+.team-overview__text {
+   font-size: 1.1rem;
+   color: var(--color-text-secondary);
+   line-height: 1.7;
+   margin-bottom: var(--spacing-lg);
+}
+
+.about-cta__container {
+   text-align: center;
+   max-width: 700px;
+}
+
+.about-cta__title {
+   font-size: var(--font-size-h2);
+   font-weight: var(--font-weight-semibold);
+   margin-bottom: var(--spacing-sm);
+   color: var(--color-text-primary);
+}
+
+.about-cta__text {
+   font-size: 1.1rem;
+   color: var(--color-text-secondary);
+   margin-bottom: var(--spacing-xl);
+}

@@ -5,19 +5,11 @@
     padding-top: var(--spacing-xxl);
     padding-bottom: var(--spacing-lg);
 
-    &__container {
-        // Container class handles max-width and horizontal padding
-    }
-
     &__main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Responsive columns
         gap: var(--spacing-xl);
         margin-bottom: var(--spacing-xl);
-    }
-
-    &__about {
-        // Styles for the first column (logo, tagline, socials)
     }
 
     &__logo-link {
@@ -68,10 +60,6 @@
             color: var(--color-background-light);
             transform: translateY(-2px); // Slight lift effect
         }
-    }
-
-    &__links {
-        // Styles for the link list columns
     }
 
     &__links-title {

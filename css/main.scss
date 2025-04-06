@@ -6,24 +6,18 @@
 @import './typography';
 
 // 3. Layout Components (Header, Footer, Nav)
-@import './header'; // Styles for .header etc. - Apply var() inside this file
-@import 'footer'; // Styles for .footer etc. - Apply var() inside this file
-// @import 'navigation'; // If navigation gets complex
+@import './header';
+@import './footer';
 
 // 4. UI Components (Buttons, Forms, Cards etc.)
-@import './buttons'; // Styles for .button etc. - Apply var() inside this file
-// @import 'forms'; // Will add later
-// @import 'cards'; // If needed for other components
+@import './buttons';
 
 // 5. Page Sections / Blocks (Specific page structure styles)
-@import './hero'; // Styles for .hero etc. - Apply var() inside this file
-@import './sections'; // Styles for .value-prop, .differentiators etc. Apply var() inside this file
-                   // Or break into:
-                   // @import 'value-prop';
-                   // @import 'differentiators';
-                   // @import 'client-focus';
-                   // @import 'candidate-focus';
+@import './hero';
+@import './sections';
+@import './services';
+@import './about';
+@import './contact';
 
 // 6. Animations & Utilities
-@import './animations'; // Styles for animation classes - May use variables
-// @import 'utilities'; // Utility classes like .text-center etc.
+@import './animations';
