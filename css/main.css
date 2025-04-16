@@ -772,8 +772,8 @@ p {
   min-height: 80vh;
   display: grid;
   align-items: center;
-  background-color: hsl(0, 0%, 96%);
-  background-image: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 75%, #d6d6d6 75%, #d6d6d6), linear-gradient(-45deg, #d6d6d6 25%, transparent 25%, transparent 75%, #d6d6d6 75%, #d6d6d6);
+  background-color: #e4e5e7;
+  background-image: linear-gradient(45deg, #f4f4f6 25%, transparent 25%, transparent 75%, #f4f4f6 75%, #f4f4f6), linear-gradient(-45deg, #f4f4f6 25%, transparent 25%, transparent 75%, #f4f4f6 75%, #f4f4f6);
   background-size: 60px 60px;
 }
 
@@ -1018,8 +1018,8 @@ p {
   min-height: 80vh;
   display: grid;
   align-items: center;
-  background-color: #e6e6e6;
-  background-image: radial-gradient(circle at 100% 150%, #e6e6e6 24%, white 24%, white 28%, #e6e6e6 28%, #e6e6e6 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, #e6e6e6 24%, white 24%, white 28%, #e6e6e6 28%, #e6e6e6 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, #e6e6e6 10%, #e6e6e6 23%, white 23%, white 30%, #e6e6e6 30%, #e6e6e6 43%, white 43%, white 50%, #e6e6e6 50%, #e6e6e6 63%, white 63%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, #e6e6e6 5%, #e6e6e6 15%, white 15%, white 20%, #e6e6e6 20%, #e6e6e6 29%, white 29%, white 34%, #e6e6e6 34%, #e6e6e6 44%, white 44%, white 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, white 5%, #e6e6e6 5%, #e6e6e6 15%, white 15%, white 20%, #e6e6e6 20%, #e6e6e6 29%, white 29%, white 34%, #e6e6e6 34%, #e6e6e6 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-color: #f4f4f6;
+  background-image: radial-gradient(circle at 100% 150%, #e4e5e7 24%, white 24%, white 28%, #e4e5e7 28%, #e4e5e7 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, #e4e5e7 24%, white 24%, white 28%, #e4e5e7 28%, #e4e5e7 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, #e4e5e7 10%, #e4e5e7 23%, white 23%, white 30%, #e4e5e7 30%, #e4e5e7 43%, white 43%, white 50%, #e4e5e7 50%, #e4e5e7 63%, white 63%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, #e4e5e7 5%, #e4e5e7 15%, white 15%, white 20%, #e4e5e7 20%, #e4e5e7 29%, white 29%, white 34%, #e4e5e7 34%, #e4e5e7 44%, white 44%, white 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, white 5%, #e4e5e7 5%, #e4e5e7 15%, white 15%, white 20%, #e4e5e7 20%, #e4e5e7 29%, white 29%, white 34%, #e4e5e7 34%, #e4e5e7 44%, white 44%, white 49%, transparent 49%, transparent);
   background-size: 100px 50px;
 }
 
